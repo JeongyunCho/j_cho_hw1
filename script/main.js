@@ -34,9 +34,12 @@
 
         theSubhead.classList.remove(appliedClass);
         theHeader.classList.remove(appliedClass);
+		
 
         theSubhead.classList.add(this.id);
         theHeader.classList.add(this.id);
+		
+		  
 
         theSubhead.firstChild.nodeValue = objectIndex.headline;
         theSeasonText.firstChild.nodeValue = objectIndex.text;
@@ -63,20 +66,41 @@
 
        //populate all the content on the page
        let lightboxImg = lightbox.querySelector('img');
+		  lightboxImg.classList.add('big');
        let lightboxClose = lightbox.querySelector('.close-lightbox');
+		let lightboxRight = lightbox.querySelector('.right-arrow');
+		  let lightboxLeft = lightbox.querySelector('.left-arrow');
        let lightboxDesc = lightbox.querySelector('p');
+		  lightboxDesc.classList.add('detailDesc');
 
        lightboxImg.src = "images/" + currentObject.images[currentIndex];
        lightboxDesc.innerHTML = currentObject.imageDescription[currentIndex];
 
        lightboxClose.addEventListener('click', closeLightbox, false);
+		  lightboxRight.addEventListener('click', leftLightbox, false);
+		  lightboxLeft.addEventListener('click', rightLightbox, false);
+		 
   }
   function closeLightbox() {
     //debugger;
-	 
+	  let lightbox = document.querySelector('.lightbox');
+	   document.body.style.overflow = "visible";
+	  //reset overflow to visible
+	   lightbox.style.display = 'none';
+	  //have light box display none
     //reset all the lightbox content, close the lightbox (not neccessarily in that order
-
   }
+	function leftLightbox()
+	{
+		//debugger;
+		//Tried using currentIndex and currentObject to make image slide but did not worked.
+	
+	}
+	function rightLightbox()
+	{
+		//debugger
+	}
+	
       // initialize the app
       // theSubhead.firstChild.nodeValue = dynamicContent['spring'].headline;
       // theSeasonText.firstChild.nodeValue = dynamicContent['spring'].text;

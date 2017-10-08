@@ -1,10 +1,17 @@
 @charset "UTF-8";
 
-body { background: #000; color: #FFF; font-size: 16px; }
+body { background:rgba(0,0,0,0.33); font-size: 16px; }
 
-h1, h2 { font-family: 'Mystery Quest', cursive; }
+h1, h2 { font-family: 'Mystery Quest', cursive; text-shadow: 1px 1px 2px black;  }
+h1 {
+	background-color: white;
+	padding: 5px 0px;
+}
+h2 {
+	background-color: #333;
+}
 
-section, article, .subImagesContainer { position: relative; width: 635px; margin: 0 auto; border: 0; }
+h1, section, article, .subImagesContainer { position: relative; width: 635px; margin: 0 auto; border: 0; }
 
 .heading { text-align: center; margin-top: 15px; font-size: 2em; }
 
@@ -24,24 +31,24 @@ section, article, .subImagesContainer { position: relative; width: 635px; margin
 	opacity: 0.3;
 }
 
-section { margin-top: 15px; background-color: #FFF; }
+section { margin-top: 15px; background-color: #fff; }
 
 #summer { background-position: -146px 0; }
 #autumn { background-position: -293px 0; }
 #winter { background-position: -438px 0; }
 
-.spring { color: #6ebd1a; }
+.spring { color: #6ebd1a;}
 .summer { color: #f8a40a; }
 .autumn { color: #930d03; }
 .winter { color: #02c5e5; }
 
-.main-copy { background-color: #FFF; font-size: 1.5em; }
+.main-copy { background-color: #333; font-size: 1.5em; }
 .main-copy h2 {
 	text-transform: capitalize;
 	text-align: left;
 	padding-left: 20px;
 	padding-top: 20px;
-	margin: 0; b
+	margin: 0; 
 	order:0px;
 }
 
@@ -53,9 +60,10 @@ section { margin-top: 15px; background-color: #FFF; }
 	padding-bottom: 20px;
 }
 
-.subImagesContainer { padding: 0; }
+.subImagesContainer { padding: 0; background-color: white;}
 
-.thumb { height: 90px; margin: 8px; cursor: pointer; }
+.thumb { height: 100px; width: 160px; margin: 30px 20px 10px 30px; cursor: pointer;}
+.big {height: 500px; margin: 10px auto;}
 
 .lightbox {
 	position: absolute;
@@ -64,7 +72,7 @@ section { margin-top: 15px; background-color: #FFF; }
 	width: 100%;
 	height: 100%;
 	display: none;
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color:rgba(0,0,0,0.90);
 	color: white;
 	z-index: 500;
 }
@@ -73,10 +81,62 @@ section { margin-top: 15px; background-color: #FFF; }
 	float: right;
 	margin-right: 18px;
 	margin-top: 12px;
-	font-size: 2em;
+	font-size: 3em;
 	cursor: pointer;
+	
+}
+.close-lightbox:hover {
+	color: red;
+	transition: .3s;
+}
+.left-arrow{
+	float: left;
+	margin-left: 100px;
+	margin-top: 300px;
+	font-size: 5em;
+	cursor: pointer;
+	
+}
+.right-arrow{
+	float: right;
+	margin-right: 50px;
+	margin-top: 300px;
+	font-size: 5em;
+	cursor: pointer;
+
+}
+.left-arrow:hover{
+	color: #666;
+	transition: .5s; 
+}
+.right-arrow:hover{
+	color: #666;
+	transition: .5s; 
 }
 
 .lightbox-img {
 	display: block;
+	border-radius: 1em;
+	border-color:aliceblue;
+	border-style: groove;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.detailDesc
+{
+	font-size: 2em;
+	text-align: center;
+	text-shadow: 0.5px 0.5px 1px #666; 
+	font-family: 'Mystery Quest', cursive;
+	border-color: white;
+	border-style: dashed;
+	margin: 0 6em 32em;
+}
+#largePicBkgrd
+{
+	background-color:#333;
+	width: 900px;
+	margin: 50px auto;
+	padding-top: 5px;
+	border-radius: 20px;
 }
