@@ -72,7 +72,8 @@
        lightboxClose.addEventListener('click', closeLightbox, false);
   }
   function closeLightbox() {
-    debugger;
+    //debugger;
+	 
     //reset all the lightbox content, close the lightbox (not neccessarily in that order
 
   }
