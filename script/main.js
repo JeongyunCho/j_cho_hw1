@@ -73,7 +73,11 @@
   }
   function closeLightbox() {
     //debugger;
-	 
+	  let lightbox = document.querySelector('.lightbox');
+	   document.body.style.overflow = "visible";
+	  //reset overflow to visible
+	   lightbox.style.display = 'none';
+	  //have light box display none
     //reset all the lightbox content, close the lightbox (not neccessarily in that order
 
   }
